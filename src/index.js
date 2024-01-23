@@ -131,6 +131,7 @@ mongoose.connection.on("error", (err) => {
 });
 
 const port = app.listen(process.env.PORT, function () {
+  console.log(process.env.PORT);
   console.log(`Server started on port ${process.env.PORT}...`);
 });
 // socket.io
