@@ -91,7 +91,7 @@ app.use("/user", userRoute);
 app.use("/widget", widgetRoute);
 app.use("/store", storeRoute);
 app.use("/foundation", foundationRoute);
-app.use("/api/users", socketRoutes);
+// app.use("/api/users", socketRoutes);
 populate();
 
 app.use((error, req, res, next) => {
