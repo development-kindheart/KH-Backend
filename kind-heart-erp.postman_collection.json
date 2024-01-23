@@ -1,0 +1,1450 @@
+{
+	"info": {
+		"_postman_id": "9a592146-d684-4fc6-9a07-21969d33071c",
+		"name": "kind-heart-erp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13051726"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "store",
+					"item": [
+						{
+							"name": "registerStore",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "storeName",
+											"value": "khadi",
+											"type": "text"
+										},
+										{
+											"key": "website",
+											"value": "www.google.com",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "090078601",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Lahore , Punjab , Pakistan",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Lahore",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "Khadi",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mharis.javed1996@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "store123",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"type": "file",
+											"src": "/C:/Users/PC/Downloads/download12.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/user/registerStore",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"registerStore"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "storeLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"khadi@gmail.com\",\r\n    \"password\":\"khadi123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "adminLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "foundation",
+					"item": [
+						{
+							"name": "registerFoundation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "govtIssuedFoundationId",
+											"value": "11ff2300",
+											"type": "text"
+										},
+										{
+											"key": "foundationName",
+											"value": "chippa",
+											"type": "text"
+										},
+										{
+											"key": "websiteUrl",
+											"value": "chippa.com",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mohammadharisjaved637@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "090078601",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Multan Punjab Pakistan",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Multan",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"type": "file",
+											"src": "/C:/Users/PC/Downloads/download12.jpg"
+										},
+										{
+											"key": "username",
+											"value": "haris",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "haris123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/user/registerFoundation",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"registerFoundation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginFoundation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"edhi@gmail.com\",\r\n    \"password\":\"edhi1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "widget",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Donation to Foodwise",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Donate and help companies redistributes surplus food to people in need",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/donate.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-widget",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Donation to Foodwise updated",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Donate and help companies redistributes surplus food to people in need updated",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/donate.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/edit/64c90d7606606798a7dc6305",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"edit",
+								"64c90d7606606798a7dc6305"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllWidgets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/findAll",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneWidget",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/find/64c90d7606606798a7dc6305",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"find",
+								"64c90d7606606798a7dc6305"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteWidget",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/delete/64dcc6f945941929e1c09f33",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"delete",
+								"64dcc6f945941929e1c09f33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assign widget to store",
+			"item": [
+				{
+					"name": "assign",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"storeId\":\"64d4dd9cc8bb2e95bff05ea4\",\r\n    \"storeName\":\"khadi\",\r\n    \"widgetId\":\"64d4de38c8bb2e95bff05ea9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/assign",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findWidgetAssignedStores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/findWidgetAssignedStores",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"findWidgetAssignedStores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneWidget",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/find/64dca898a82aec2221d5b309",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"find",
+								"64dca898a82aec2221d5b309"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeAssignWidget",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"storeId\":\"64dca9b4a82aec2221d5b31b\",\r\n    \"widgetId\":\"64dca8c3a82aec2221d5b30e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/removeAssignWidget",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"removeAssignWidget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editAssignWidget",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"storeId\":\"64dca9b4a82aec2221d5b31b\",\r\n    \"widgetId\":\"64dca898a82aec2221d5b309,64dca8c3a82aec2221d5b30e\" // 1st id showing the older id , and 2nd id showing the new id\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/widget/editAssignWidget",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"widget",
+								"editAssignWidget"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "getStore",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/find/64d4dd9cc8bb2e95bff05ea4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"find",
+								"64d4dd9cc8bb2e95bff05ea4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get store profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/getProfile/64ec477ee8c305887486e6ab",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"getProfile",
+								"64ec477ee8c305887486e6ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDashboardData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/getDashboardData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"getDashboardData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDonationData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/getDonationData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"getDonationData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Store Widgets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/widget?id=64dca9b2a82aec2221d5b319",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"widget"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64dca9b2a82aec2221d5b319",
+									"description": "id is basically a user id of store model"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Donation Filter Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/filter?fromDate=2023-08-01&toDate=2023-08-21&name=edhi123&paymentStatus=Pending",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2023-08-01"
+								},
+								{
+									"key": "toDate",
+									"value": "2023-08-21"
+								},
+								{
+									"key": "name",
+									"value": "edhi123"
+								},
+								{
+									"key": "paymentStatus",
+									"value": "Pending"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Foundation",
+			"item": [
+				{
+					"name": "donation to foundation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderID\" : \"123455\",\r\n    \"customerID\" : \"54321\",\r\n    \"storeId\": \"64ec477ee8c305887486e6ab\",\r\n    \"storeName\" : \"Khadi\",\r\n    \"totlaDonaltion\": \"$50\",\r\n    \"date\": \"2023/08/28\",\r\n    \"foundation\" : {\r\n    \"totalAmount\": \"40\",\r\n    \"donationDetails\": [\r\n        {\r\n            \"foundationid\":\"64ec4641e8c305887486e689\",\r\n            \"widgetId\":\"64ec53570e65c2e5f9dcb215\",\r\n            \"foundationName\": \"chippa\",\r\n            \"paymentStatus\":\"Pending\",\r\n             \"amount\": \"40\"\r\n        }\r\n    ]\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/foundation/donation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"foundation",
+								"donation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Payment status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"64ec45aee8c305887486e67d\", //foundation's userId\r\n    \"donationIndex\" : \"0\",\r\n    \"statusValue\": \"Pending\"  //Approved or Pending\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/foundation/updatePaymentStatus",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"foundation",
+								"updatePaymentStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Foundation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/foundation/getFoundation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"foundation",
+								"getFoundation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get foundation profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/foundation/getProfile/64ec477ee8c305887486e6ab",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"foundation",
+								"getProfile",
+								"64ec477ee8c305887486e6ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Donation Filter Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/foundation/filter?fromDate=2023-08-01&toDate=2023-08-21&name=Khadi&paymentStatus=Pending",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"foundation",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2023-08-01"
+								},
+								{
+									"key": "toDate",
+									"value": "2023-08-21"
+								},
+								{
+									"key": "name",
+									"value": "Khadi"
+								},
+								{
+									"key": "paymentStatus",
+									"value": "Pending",
+									"description": "It will be Pending or Approved"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dashboard Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/foundation/dashboard",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"foundation",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "admin DashBoard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/dashboard",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin Donation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/donation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"donation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin Foundation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/foundation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"foundation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mohammadharisjaved637@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/forgotPassword",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"haris1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/resetPassword?token=1okOyMkLIu4s5JIe9LluvRJENQMi0TGR",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"resetPassword"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "1okOyMkLIu4s5JIe9LluvRJENQMi0TGR"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGVjNDc3ZWU4YzMwNTg4NzQ4NmU2YWIiLCJpYXQiOjE2OTM0NzUyNDR9.7en3ZnPL6yzjBkATBbkLQF6PFDkLPsjZE2cdRAuf5wc",
+			"type": "string"
+		}
+	]
+}
