@@ -134,6 +134,6 @@ const port = app.listen(process.env.PORT, function () {
   console.log(`Server started on port ${process.env.PORT}...`);
 });
 // socket.io
-initSocket(port, corsOptions);
+// initSocket(port, corsOptions);
 
 module.exports = app;
