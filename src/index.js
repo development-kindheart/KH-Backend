@@ -92,8 +92,7 @@ app.use("/widget", widgetRoute);
 app.use("/store", storeRoute);
 app.use("/foundation", foundationRoute);
 // app.use("/api/users", socketRoutes);
-populate();
-console.log(populate());
+await populate();
 
 app.use((error, req, res, next) => {
   console.log("index-----error", error);
