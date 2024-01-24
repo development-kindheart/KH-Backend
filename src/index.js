@@ -101,14 +101,14 @@ app.use("/foundation", foundationRoute);
 //   }
 // }
 // populateAdmin();
-(async function () {
-  try {
-    const admin = await populate();
-    console.log('Admin', admin);
-  } catch (error) {
-    console.log(error);
-  }
-})()
+// (async function () {
+//   try {
+//     const admin = await populate();
+//     console.log('Admin', admin);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// })()
 
 app.use((error, req, res, next) => {
   console.log("index-----error", error);
