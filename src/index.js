@@ -43,7 +43,7 @@ app.use((req, res, next) => {
 // };
 // activeAll();
 // XXXXXXXXXXX Adding Dummy AdminXXXXXXXXXXXXX
-// Dummy Admin
+// Dummy Admin.
 /*
 const dummyAdmin = async () => {
   const User = require("./models/UserModel");
