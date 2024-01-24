@@ -92,23 +92,23 @@ app.use("/widget", widgetRoute);
 app.use("/store", storeRoute);
 app.use("/foundation", foundationRoute);
 // app.use("/api/users", socketRoutes);
-const populateAdmin = async function () {
-  try {
-    const admin = await populate();
-    console.log('Admin', admin);
-  } catch (error) {
-    console.log(error);
-  }
-}
-populateAdmin();
-// (async function () {
+// const populateAdmin = async function () {
 //   try {
 //     const admin = await populate();
 //     console.log('Admin', admin);
 //   } catch (error) {
 //     console.log(error);
 //   }
-// })()
+// }
+// populateAdmin();
+(async function () {
+  try {
+    const admin = await populate();
+    console.log('Admin', admin);
+  } catch (error) {
+    console.log(error);
+  }
+})()
 
 app.use((error, req, res, next) => {
   console.log("index-----error", error);
