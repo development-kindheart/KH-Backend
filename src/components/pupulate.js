@@ -13,7 +13,7 @@ module.exports = async function Populate() {
       active: "true",
     });
     await user.save();
-
+    console.log(user);
     console.log("created");
   } catch (err) {
     return console.log("error", err);
