@@ -15,6 +15,8 @@ const UserModel = require("./models/UserModel");
 const dotenv = require("dotenv").config();
 const app = express();
 
+populateAdmin();
+
 const corsOptions = {
   origin: process.env.REACT_BASE_URL,
   credentials: true,
@@ -93,16 +95,14 @@ app.use("/store", storeRoute);
 app.use("/foundation", foundationRoute);
 // app.use("/api/users", socketRoutes);
 // populate().then((result) => console.log(result)).catch((err) => console.log(err));
-const populateAdmin = async () => {
+async function populateAdmin() {
   try {
     const admin = await populate();
-    console.log(admin);
+    console.log('Admin => ', admin);
   } catch (error) {
     console.log(error);
   }
 }
-populateAdmin()
-
 app.use((error, req, res, next) => {
   console.log("index-----error", error);
   const status = error.statusCode || 500;
